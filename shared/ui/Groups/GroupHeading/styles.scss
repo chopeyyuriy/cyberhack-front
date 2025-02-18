@@ -1,0 +1,19 @@
+.group-heading {
+  @apply flex w-full items-center justify-between max-md:flex-col max-md:items-start max-md:gap-4;
+
+  &__wrapper {
+    @apply flex w-full items-center gap-4 max-md:flex-col max-md:gap-3;
+  }
+
+  &__title {
+    @apply text-[22px] text-[#C0C6D1] max-md:w-1/2 max-md:text-[28px];
+  }
+
+  &__slash {
+    @apply max-md:hidden;
+  }
+
+  &__text {
+    @apply text-[#595962];
+  }
+}

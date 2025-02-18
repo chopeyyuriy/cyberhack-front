@@ -1,0 +1,97 @@
+.game-account-content {
+  @apply flex flex-col gap-[18px] rounded-md p-6;
+  background: rgba(19, 20, 21, 0.4);
+
+  &__top {
+    @apply flex items-start gap-5;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-1;
+  }
+
+  &__subtitle {
+    @apply text-xs text-[#595962];
+  }
+
+  &__title {
+    @apply text-[20px] font-light text-[#C0C6D1];
+  }
+
+  &-status {
+    @apply ml-auto flex items-center gap-2 rounded bg-[#141616] p-[6px];
+
+    &__text {
+      @apply text-[13px] text-[#71B280];
+    }
+  }
+
+  &__list {
+    @apply flex items-center gap-1;
+  }
+
+  &__text {
+    @apply block cursor-pointer rounded p-2 text-[13px] text-[#8A8A98];
+    background: rgba(255, 238, 238, 0.02);
+  }
+
+  &__item {
+    &_highlight {
+      background: linear-gradient(
+        90deg,
+        rgb(255, 238, 238),
+        rgb(221, 239, 187)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.08px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @apply text-[15px] font-light text-[#5C5C65];
+  }
+
+  &__platform {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0 6px;
+    height: 28px;
+    font-size: 13px;
+
+    &_0 {
+      color: #718EC7;
+
+      svg {
+        path {
+          fill: #718EC7;
+        }
+      }
+    }
+
+    &_1 {
+      color: #8ADAD1;
+
+      svg {
+        path {
+          fill: #8ADAD1;
+        }
+      }
+    }
+
+    &_2 {
+      color: #CD412B;
+
+      svg {
+        path {
+          fill: #CD412B;
+        }
+      }
+    }
+  }
+}

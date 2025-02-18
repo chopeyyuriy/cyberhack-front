@@ -1,0 +1,58 @@
+<svg width="64.000000" height="64.000000" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_405_12193_dd" x="6.153320" y="1.312996" width="53.693359" height="61.374001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="28.6667"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="1.33333"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_2"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="22.6667"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.051 0"/>
+			<feBlend mode="normal" in2="effect_innerShadow_2" result="effect_innerShadow_3"/>
+		</filter>
+		<filter id="filter_405_12194_dd" x="0.000000" y="21.000000" width="15.000000" height="9.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="29.3333"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="2"/>
+			<feGaussianBlur stdDeviation="0.666667"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_2"/>
+		</filter>
+		<filter id="filter_405_12195_dd" x="0.000000" y="34.000000" width="36.000000" height="9.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="29.3333"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="2"/>
+			<feGaussianBlur stdDeviation="0.666667"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_2"/>
+		</filter>
+	</defs>
+	<g filter="url(#filter_405_12193_dd)">
+		<path id="Polygon 2" d="M28.9 2.44L10.05 13.67C7.63 15.11 6.15 17.72 6.15 20.54L6.15 43.45C6.15 46.27 7.63 48.88 10.05 50.32L28.9 61.55C31.42 63.06 34.57 63.06 37.09 61.55L55.94 50.32C58.36 48.88 59.84 46.27 59.84 43.45L59.84 20.54C59.84 17.72 58.36 15.11 55.94 13.67L37.09 2.44C34.57 0.93 31.42 0.93 28.9 2.44Z" fill="#FFFFFF" fill-opacity="0.030000" fill-rule="evenodd"/>
+	</g>
+	<g filter="url(#filter_405_12194_dd)">
+		<rect id="Rectangle 31" y="21.000000" rx="4.500000" width="15.000001" height="9.000001" fill="#E1C58B" fill-opacity="1.000000"/>
+	</g>
+	<g filter="url(#filter_405_12195_dd)">
+		<rect id="Rectangle 32" y="34.000000" rx="4.500000" width="36.000004" height="9.000001" fill="#59B3A8" fill-opacity="1.000000"/>
+	</g>
+</svg>

@@ -1,0 +1,59 @@
+.purchases-list {
+  @apply flex w-full flex-col gap-[2px];
+
+  &__top {
+    @apply grid gap-6 px-4 py-2 text-[11px] text-[#595962];
+    grid-template-columns:
+      minmax(min-content, 242px) minmax(min-content, 136px) minmax(
+        min-content,
+        200px
+      )
+      minmax(min-content, 158px) minmax(min-content, 44px);
+  }
+
+  &__image {
+    @apply h-[42px] w-[42px] rounded;
+  }
+
+  &__price {
+    @apply text-sm font-light text-[#C0C6D1];
+  }
+
+  &__date {
+    @apply text-[13px] text-[#595962];
+  }
+
+  &__title {
+    @apply text-[13px] font-light text-[#C0C6D1];
+  }
+
+  &__description {
+    @apply text-[13px] text-[#595962];
+  }
+
+  &__list {
+    @apply flex w-full flex-col gap-[2px] border-t border-t-[white]/[.05];
+  }
+
+  &__item {
+    @apply grid cursor-pointer items-center gap-6 rounded p-4;
+    grid-template-columns:
+      minmax(min-content, 242px) minmax(min-content, 136px) minmax(
+        min-content,
+        200px
+      )
+      minmax(min-content, 158px) minmax(min-content, 44px);
+
+    &_secondary {
+      background: rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  &__wrapper {
+    @apply flex items-center gap-3;
+  }
+
+  &__content {
+    @apply flex flex-col gap-1;
+  }
+}

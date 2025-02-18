@@ -1,0 +1,19 @@
+.header-menu-mobile {
+  @apply fixed left-0 top-[68px] flex flex-col gap-6 bg-[#0C0D10] p-5;
+
+  height: calc(100vh - 68px);
+  width: 100%;
+  z-index: 10;
+
+  &__list {
+    @apply flex flex-col gap-4;
+  }
+
+  &__item {
+    @apply text-sm text-[#8A8A98];
+
+    &_active {
+      @apply text-[#59B3A8];
+    }
+  }
+}

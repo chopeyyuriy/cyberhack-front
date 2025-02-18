@@ -1,0 +1,62 @@
+.profile-navigation {
+  &__item {
+    @apply transition-colors duration-300;
+
+    svg {
+      path {
+        fill: #595962;
+      }
+    }
+
+    &::before {
+      content: "";
+      height: 40px;
+      width: 1px;
+      background: linear-gradient(
+        180deg,
+        rgba(138, 218, 209, 0),
+        rgba(138, 218, 209, 0.5) 49.532%,
+        rgba(138, 218, 209, 0) 100%
+      );
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      filter: blur(31.4px);
+      /* Accent/Birch */
+      background: rgb(89, 179, 168);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &_active {
+      .profile-navigation__text {
+        @apply text-[#59B3A8];
+      }
+
+      &::before {
+        opacity: 1;
+      }
+      &::after {
+        opacity: 1;
+      }
+
+      svg {
+        path {
+          fill: #59B3A8;
+        }
+      }
+    }
+  }
+}

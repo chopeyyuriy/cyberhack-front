@@ -1,0 +1,16 @@
+.category-card {
+  @apply flex cursor-pointer flex-col items-center gap-2   transition-opacity duration-300 hover:opacity-70;
+
+  &__image {
+    // width: 216px;
+    // height: 216px;
+    // background-size: cover;
+    // background-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  &__title {
+    @apply text-xs text-[#C0C6D1];
+  }
+}

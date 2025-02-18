@@ -1,0 +1,17 @@
+.primary-button {
+  @apply relative flex h-[46px] cursor-pointer select-none items-center justify-center px-3 transition-opacity duration-300 hover:opacity-80;
+
+  &__text {
+    @apply whitespace-nowrap text-[13px];
+  }
+
+  &__border {
+    @apply left-0 top-0 translate-x-[-100%];
+
+    &_transformed {
+      left: auto !important;
+      right: 0 !important;
+      transform: translateX(100%) scale(-1) !important;
+    }
+  }
+}

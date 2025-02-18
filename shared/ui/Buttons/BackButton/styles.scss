@@ -1,0 +1,11 @@
+.back-button {
+  @apply flex cursor-pointer items-center gap-3 p-3;
+
+  &__icon {
+    @apply h-6 w-6;
+  }
+
+  &__text {
+    @apply text-sm text-[#8A8A98];
+  }
+}

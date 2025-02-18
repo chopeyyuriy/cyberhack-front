@@ -1,0 +1,11 @@
+.drivers-banner {
+  @apply flex w-full items-center gap-2 rounded-md bg-[#C0C6D1] p-3;
+
+  &__icon {
+    @apply block h-[36px] w-[36px];
+  }
+
+  &__description {
+    @apply text-[13px] text-[#0E1012];
+  }
+}

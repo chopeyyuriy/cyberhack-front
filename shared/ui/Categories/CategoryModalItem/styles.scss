@@ -1,0 +1,38 @@
+.category-modal-item {
+  @apply w-full;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+
+  &:first-child {
+    border: 0;
+  }
+
+  &__container {
+    @apply flex w-full items-center gap-6 px-[14px];
+  }
+
+  &__wrapper {
+    @apply flex w-[338px] items-center gap-3;
+  }
+
+  &__image {
+    @apply block h-[42px] w-[42px] rounded;
+  }
+
+  &__content {
+    @apply flex flex-col gap-1;
+  }
+
+  &__title {
+    @apply text-[13px] font-light text-[#C0C6D1];
+  }
+
+  &__text {
+    @apply text-[13px] text-[#595962];
+  }
+
+  &__tag {
+    @apply rounded p-1 text-[10px] font-medium text-[#8A8A98];
+    background: rgba(138, 138, 152, 0.04);
+  }
+}

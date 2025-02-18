@@ -1,0 +1,29 @@
+.accounts-banner {
+  @apply mt-[120px] max-md:my-12;
+
+  &__container {
+    @apply flex h-[446px] w-full items-center justify-between max-md:h-auto max-md:flex-col-reverse;
+    background: url("../../../assets/images/home/banner/bg.svg") center /
+      contain no-repeat;
+  }
+
+  &__content {
+    @apply ml-[34px] flex w-full max-w-[536px] flex-col items-start gap-3;
+  }
+
+  &__title {
+    @apply text-5xl leading-tight text-[#C0C6D1];
+  }
+
+  &__description {
+    @apply mb-8 text-[15px] font-light text-[#595962];
+  }
+
+  &__button {
+    @apply max-md:w-full;
+
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 24px);
+    }
+  }
+}

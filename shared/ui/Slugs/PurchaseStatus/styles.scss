@@ -1,0 +1,12 @@
+.purchase-status {
+  @apply flex items-center justify-center rounded p-1 text-[10px] text-[#C84B5A];
+  background: rgba(90, 157, 105, 0.04);
+
+  &_delivered {
+    @apply text-[#5A9D69];
+  }
+
+  &_progress {
+    @apply text-[#3B87C6];
+  }
+}

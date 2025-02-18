@@ -1,0 +1,23 @@
+.search {
+  @apply relative flex items-center gap-5 rounded-md border-[2px] border-transparent p-4 transition-colors duration-300;
+
+  &:hover {
+    @apply border-[#95B6B3];
+  }
+
+  &__icon {
+    @apply cursor-pointer;
+  }
+
+  &__input {
+    @apply border-none bg-transparent text-sm leading-[-0.24px] text-[#C0C6D1] outline-none placeholder:text-[#595962];
+  }
+
+  &:focus-within {
+    border-color: #95b6b3 !important;
+  }
+
+  &__clear {
+    @apply absolute right-4 top-4 cursor-pointer;
+  }
+}

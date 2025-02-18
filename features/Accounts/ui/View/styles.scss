@@ -1,0 +1,41 @@
+.accounts-item__tag {
+  background: rgba(255, 255, 255, 0.02);
+  height: 28px;
+  padding: 0 6px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #595962;
+
+  &_platform {
+    &-0 {
+      color: #718EC7;
+
+      svg {
+        path {
+          fill: #718EC7;
+        }
+      }
+    }
+
+    &-1 {
+      color: #8ADAD1;
+
+      svg {
+        path {
+          fill: #8ADAD1;
+        }
+      }
+    }
+
+    &-2 {
+      color: #CD412B;
+
+      svg {
+        path {
+          fill: #CD412B;
+        }
+      }
+    }
+  }
+}

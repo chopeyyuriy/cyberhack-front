@@ -1,0 +1,21 @@
+.catalog {
+  .category-card {
+    &__image {
+      // width: 162px;
+      // height: 162px;
+    }
+  }
+}
+
+.accounts-page {
+  &__head {
+    h1 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.374px;
+      color: #C0C6D1;
+    }
+  }
+}

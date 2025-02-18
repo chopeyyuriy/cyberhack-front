@@ -1,0 +1,40 @@
+.news-card {
+  @apply flex w-full flex-col gap-6 p-6;
+  backdrop-filter: blur(6px);
+
+  &__title {
+    @apply text-[17px] text-white;
+  }
+
+  &__image {
+    @apply w-full;
+    width: 100%;
+    height: 148px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__description {
+    @apply text-[15px] font-light text-[#8A8A98];
+  }
+
+  &__wrapper {
+    @apply flex items-center justify-between;
+  }
+
+  &-game {
+    @apply flex items-center gap-2;
+
+    &__icon {
+      @apply h-5 w-5;
+    }
+
+    &__text {
+      @apply text-[11px] text-[#595962];
+    }
+  }
+
+  &__date {
+    @apply text-[11px] text-[#595962];
+  }
+}

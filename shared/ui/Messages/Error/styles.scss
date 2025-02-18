@@ -1,0 +1,8 @@
+.error-message {
+  @apply flex items-center gap-1 rounded p-1;
+  background: rgba(205, 65, 43, 0.04);
+
+  &__text {
+    @apply text-xs text-[#CD412B];
+  }
+}

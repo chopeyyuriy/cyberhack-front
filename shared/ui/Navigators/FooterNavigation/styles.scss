@@ -1,0 +1,15 @@
+.footer-navigation {
+  @apply flex flex-col gap-5 max-lg:hidden;
+
+  &__title {
+    @apply text-[13px] text-[#95B6B3];
+  }
+
+  &__list {
+    @apply flex flex-col items-start gap-4;
+  }
+
+  &__item {
+    @apply text-sm font-light text-[#595962] transition-colors duration-300 hover:text-[#C0C6D1];
+  }
+}

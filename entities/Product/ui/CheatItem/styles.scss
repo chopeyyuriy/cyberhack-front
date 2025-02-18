@@ -1,0 +1,27 @@
+.cheat-item {
+  @apply flex cursor-pointer items-center gap-3 p-3;
+
+  &__image {
+    @apply h-[56px] w-[56px];
+  }
+
+  &__container {
+    @apply mr-auto flex flex-col gap-[6px];
+  }
+
+  &__title {
+    @apply font-light text-[#C0C6D1];
+  }
+
+  &-price {
+    @apply flex flex-col gap-[10px];
+  }
+
+  &__text {
+    @apply text-xs text-[#595962];
+  }
+
+  &__value {
+    @apply text-[13px] text-[#C0C6D1];
+  }
+}

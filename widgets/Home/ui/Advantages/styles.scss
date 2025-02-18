@@ -1,0 +1,52 @@
+@import "../../../../shared/assets/styles/animations.scss";
+
+.advantages {
+  @apply relative w-full select-none py-6;
+
+  animation: slide-top 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  &__title {
+    @apply mb-6 w-3/4 text-[28px] text-[#C0C6D1] md:hidden;
+  }
+
+  &__background {
+    @apply absolute left-0 top-0 block h-[278px] min-h-[278px] w-full max-md:hidden;
+  }
+
+  &-list {
+    @apply relative flex w-full items-center justify-between gap-5 max-md:hidden;
+
+    &_mobile {
+      @apply h-[254px] md:hidden;
+    }
+
+    &__item {
+      @apply flex flex-col items-center;
+    }
+
+    &__content {
+      @apply flex flex-col items-center gap-[6px] text-center;
+    }
+
+    &__image {
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
+    &__title {
+      @apply text-sm text-[#95B6B3];
+    }
+
+    &__description {
+      @apply max-w-[286px] text-sm font-light text-[#595962];
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #ffffff0f !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #324545 !important;
+}

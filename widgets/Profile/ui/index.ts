@@ -1,0 +1,9 @@
+export { default as ProfileIntegrations } from "./Integrations";
+export { default as ProfileMenu } from "./Menu";
+export { default as PersonalInfo } from "./PersonalInfo";
+export { default as StoreSettings } from "./StoreSettings";
+export { default as PurchasesList } from "./PurchasesList";
+export { default as ProfileReviews } from "./Reviews";
+export { default as PasswordForm } from "./PasswordForm";
+export { default as Authentication } from "./Authentication";
+export { default as Devices } from "./Devices";

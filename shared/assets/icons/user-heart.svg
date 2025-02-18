@@ -1,0 +1,29 @@
+<svg width="30.000000" height="30.000000" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip21_17905">
+			<rect id="Bold Duotone / Users / User Heart" rx="5.000000" width="30.000000" height="30.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="9.000000" y1="9.000000" x2="17.000000" y2="9.000000" id="paint_linear_21_17906_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFEEEE"/>
+			<stop offset="1.000000" stop-color="#DDEFBB"/>
+		</linearGradient>
+		<linearGradient x1="5.000000" y1="20.250000" x2="21.000000" y2="20.250000" id="paint_linear_21_17907_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFEEEE"/>
+			<stop offset="1.000000" stop-color="#DDEFBB"/>
+		</linearGradient>
+		<linearGradient x1="19.000000" y1="13.413779" x2="25.000000" y2="13.413779" id="paint_linear_21_17908_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFEEEE"/>
+			<stop offset="1.000000" stop-color="#DDEFBB"/>
+		</linearGradient>
+	</defs>
+	<g clip-path="url(#clip21_17905)">
+		<circle id="Vector" cx="13.000000" cy="9.000000" r="4.000000" fill="url(#paint_linear_21_17906_0)" fill-opacity="1.000000"/>
+		<g opacity="0.500000">
+			<path id="Vector" d="M21 20.25C21 22.73 21 24.75 13 24.75C5 24.75 5 22.73 5 20.25C5 17.76 8.58 15.75 13 15.75C17.41 15.75 21 17.76 21 20.25Z" fill="url(#paint_linear_21_17907_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+		<path id="Vector" d="M19 12.69C19 13.68 20.16 14.72 21.04 15.36C21.46 15.67 21.67 15.82 22 15.82C22.32 15.82 22.53 15.67 22.95 15.36C23.83 14.72 25 13.68 25 12.69C25 11.02 23.34 10.39 22 11.69C20.65 10.39 19 11.02 19 12.69Z" fill="url(#paint_linear_21_17908_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

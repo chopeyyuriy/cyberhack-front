@@ -1,0 +1,55 @@
+.order-select {
+  @apply flex w-full flex-col gap-1;
+
+  &__item {
+    @apply relative flex cursor-pointer items-center gap-2 overflow-hidden rounded-md border px-[10px] py-3 transition-colors duration-300;
+    border-color: rgba(225, 197, 139, 0.01);
+    border-style: solid;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 32px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      filter: blur(31.4px);
+      background: rgb(225, 197, 139);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &_active {
+      border-color: rgba(225, 197, 139, 0.06);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .order-select {
+        &__title {
+          color: #e1c58b;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @apply text-sm text-[#8A8A98];
+  }
+
+  &__discount {
+    @apply rounded p-1 text-[11px] font-semibold text-[#59B3A8];
+    background: rgba(138, 218, 209, 0.12);
+  }
+
+  &__price {
+    @apply ml-auto text-sm text-[#C0C6D1];
+
+    &_through {
+      @apply text-sm text-[#5C5C65] line-through;
+    }
+  }
+}

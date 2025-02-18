@@ -1,0 +1,24 @@
+.category-inline-link {
+  @apply flex items-center justify-between rounded-sm p-2;
+  background: rgba(255, 255, 255, 0.01);
+
+  &__wrapper {
+    @apply flex items-center gap-[6px];
+  }
+
+  &__icon {
+    @apply block h-5 w-5 cursor-pointer;
+  }
+
+  &__title {
+    @apply text-[11px] text-[#595962];
+  }
+
+  &__count {
+    @apply flex h-5 w-5 cursor-pointer items-center justify-center rounded-md bg-[#95B6B3] text-[11px] font-semibold text-[#0E1012] transition-opacity duration-300 hover:opacity-80;
+  }
+
+  &__button {
+    @apply text-[11px] text-[#59B3A8] transition-opacity duration-300 hover:opacity-80;
+  }
+}

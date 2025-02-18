@@ -1,0 +1,35 @@
+.login {
+  &__container {
+    background: url("../../../../shared/assets/images/auth/login-bg.svg") center /
+      cover no-repeat;
+  }
+
+  &__wrapper {
+    background: url("../../../../shared/assets/images/auth/right-bg.svg") center /
+      cover no-repeat;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 728px;
+      height: 877px;
+      background: url("../../../../shared/assets/images/auth/right-picture.png")
+        center / contain no-repeat;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 12px;
+
+  &-bullet {
+    background: rgba(255, 255, 255, 0.06) !important;
+    &-active {
+      background: #324545 !important;
+    }
+  }
+}

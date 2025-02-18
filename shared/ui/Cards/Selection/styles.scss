@@ -1,0 +1,42 @@
+.selection-card {
+  @apply relative h-[358px] w-[452px] cursor-pointer overflow-hidden rounded-lg transition-opacity duration-300 hover:opacity-70;
+  background-size: cover;
+  background-position: center;
+
+  &__background {
+    @apply absolute h-full w-full;
+  }
+
+  &__container {
+    @apply relative flex h-full flex-col justify-between p-7;
+  }
+
+  &__content {
+    @apply flex flex-col gap-[6px];
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-[10px];
+  }
+
+  &__title {
+    @apply text-[22px] text-[#C0C6D1];
+  }
+
+  &__text {
+    @apply text-sm text-[#8A8A98];
+  }
+
+  &__subtitle {
+    @apply text-[11px] text-[#595962];
+  }
+
+  &__list {
+    @apply flex items-center gap-[6px];
+  }
+
+  &__item {
+    @apply cursor-pointer rounded p-1;
+    background: rgba(255, 255, 255, 0.06);
+  }
+}

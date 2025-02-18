@@ -1,0 +1,25 @@
+.open-notifications {
+  @apply cursor-pointer opacity-[28%];
+}
+
+.open-notifications-wrapper {
+  position: relative;
+}
+
+.open-notifications-count {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-align: center;
+  border: 2px solid #0e1012;
+  background: #e1c58b;
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  padding: 1px 2px;
+  height: 15px;
+  border-radius: 100%;
+  min-width: 15px;
+}
+

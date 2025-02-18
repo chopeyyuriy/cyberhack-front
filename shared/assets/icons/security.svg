@@ -1,0 +1,13 @@
+<svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip405_11907">
+			<rect id="Bold / Security / Shield" width="36.000000" height="36.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip405_11907)">
+		<path id="Vector" d="M14.13 6.88C15.47 6.43 16.34 6.13 17.08 6L17.08 12.5L7 15.81C7 12.12 7 10.26 7.46 9.63C7.92 8.98 9.75 8.36 13.43 7.11L14.13 6.88ZM18.91 6L18.91 12.5L29 15.81C29 12.12 28.99 10.26 28.53 9.63C28.07 8.98 26.24 8.36 22.56 7.11L21.86 6.88C20.52 6.43 19.65 6.13 18.91 6ZM7 17.72L17.08 14.4L17.08 30C16.45 29.92 16.05 29.74 15.43 29.47C12.18 28.07 7 24.77 7 17.96L7 17.72ZM18.91 30L18.91 14.4L29 17.72L29 17.96C29 24.77 23.81 28.07 20.56 29.47C19.94 29.74 19.54 29.92 18.91 30Z" fill="#0E1012" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

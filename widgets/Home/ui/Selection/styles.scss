@@ -1,0 +1,24 @@
+@import "../../../../shared/assets/styles/animations.scss";
+
+.selection {
+  &-list {
+    @apply mt-11 grid grid-cols-3 gap-5 max-md:hidden;
+
+    animation: slide-top-half 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    &_mobile {
+      @apply mt-6 w-full md:hidden;
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-pagination {
+        margin-top: 24px;
+        position: relative;
+      }
+    }
+  }
+}

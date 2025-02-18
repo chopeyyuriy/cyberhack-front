@@ -1,0 +1,111 @@
+.categories-menu {
+  @apply flex w-[284px] min-w-[284px] flex-col gap-3 rounded-md pt-6;
+  background: rgba(14, 16, 17, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+
+  &__title {
+    @apply px-6 text-[12px] text-[#95B6B3];
+  }
+
+  &__list {
+    @apply flex w-full flex-col;
+  }
+
+  &__item {
+    @apply relative flex cursor-pointer items-center justify-between overflow-hidden px-6 py-2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      opacity: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(138, 218, 209, 0),
+        rgba(138, 218, 209, 0.5) 49.532%,
+        rgba(138, 218, 209, 0) 100%
+      );
+      transition: opacity 0.3s;
+    }
+
+    &::after {
+      content: "";
+      opacity: 0;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 0;
+      position: absolute;
+      transform: translate(-50%, -100%);
+      filter: blur(31.4px);
+      background: rgb(89, 179, 168);
+      transition: opacity 0.3s;
+    }
+
+    &_active {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      .categories-menu__wrapper {
+        svg {
+          path {
+            fill: #59B2A8;
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @apply block h-[22px] w-[22px];
+  }
+
+  &__wrapper {
+    @apply flex items-center gap-2;
+
+    svg {
+      path {
+        fill: #595962;
+      }
+    }
+  }
+
+  &__name {
+    @apply text-[11px] text-[#595962] transition-colors duration-300;
+
+    &_active {
+      @apply text-[#59B3A8];
+    }
+  }
+
+  &__count {
+    @apply flex h-6 w-6 items-center justify-center rounded-md text-[11px] font-semibold text-[#595962] transition-colors duration-300;
+    background: rgba(255, 255, 255, 0.04);
+
+    &_active {
+      @apply text-[#8A8A98];
+    }
+  }
+
+  .auth-checkbox {
+    border-radius: 4px;
+    border-color: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.02);
+
+    &__inner {
+      border-radius: 2px;
+
+      &_active {
+        background: #59B2A8;
+      }
+    }
+  }
+}

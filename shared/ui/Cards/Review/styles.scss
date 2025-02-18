@@ -1,0 +1,54 @@
+.review-card {
+  @apply flex w-full flex-col gap-3 rounded p-[18px];
+
+  &_light {
+    @apply bg-white/[.02];
+  }
+
+  &__container {
+    @apply flex w-full items-center justify-between;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-2;
+  }
+
+  &-game {
+    @apply flex flex-row items-center gap-3;
+
+    &__image {
+      @apply h-12 w-12;
+    }
+
+    &__content {
+      @apply flex flex-col gap-[2px];
+    }
+
+    &__title {
+      @apply text-sm text-[#C0C6D1];
+    }
+  }
+
+  &__subtitle {
+    @apply text-xs text-[#595962];
+  }
+
+  &__content {
+    @apply flex w-full flex-col gap-1;
+  }
+
+  &__title {
+    @apply text-[13px] text-[#42C195];
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &_bad {
+      color: #d03824;
+    }
+  }
+
+  &__description {
+    @apply text-sm font-light text-[#8A8A98];
+  }
+}

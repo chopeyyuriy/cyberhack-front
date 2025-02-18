@@ -1,0 +1,9 @@
+.authentication {
+  &__icon {
+    background: rgba(1, 169, 233, 0.04);
+
+    &_red {
+      background: rgba(234, 67, 53, 0.04);
+    }
+  }
+}

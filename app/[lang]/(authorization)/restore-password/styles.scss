@@ -1,0 +1,22 @@
+.restore-password {
+  &__container {
+    background: url("../../../../shared/assets/images/auth/login-bg.svg") center /
+      cover no-repeat;
+  }
+
+  &__wrapper {
+    background: url("../../../../shared/assets/images/auth/right-bg.png") center /
+      cover no-repeat;
+  }
+}
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 12px;
+
+  &-bullet {
+    background: rgba(255, 255, 255, 0.06) !important;
+    &-active {
+      background: #324545 !important;
+    }
+  }
+}

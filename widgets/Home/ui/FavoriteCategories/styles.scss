@@ -1,0 +1,35 @@
+@import "../../../../shared/assets/styles/animations.scss";
+
+.favorite-categories {
+  @apply mt-12;
+
+  &__top {
+    @apply flex w-full items-center justify-between;
+  }
+
+  &__content {
+    @apply flex items-center gap-4;
+  }
+
+  &__title {
+    @apply text-[22px] text-[#C0C6D1];
+  }
+
+  &__description {
+    @apply text-[#595962];
+  }
+
+  &__button {
+    @apply max-md:mx-3;
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 24px);
+    }
+  }
+
+  &__list {
+    @apply mt-11 grid grid-cols-6 gap-5 max-xl:grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2;
+
+    animation: slide-top-half 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}

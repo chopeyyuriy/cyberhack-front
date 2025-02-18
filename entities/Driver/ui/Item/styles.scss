@@ -1,0 +1,24 @@
+.driver-item {
+  @apply flex w-full cursor-pointer items-center justify-between gap-2 rounded p-3 max-md:flex-col max-md:items-stretch;
+
+  &__container {
+    @apply flex items-center gap-2;
+  }
+
+  &__icon {
+    @apply flex h-[42px] w-[42px] cursor-pointer items-center justify-center;
+    background: rgba(108, 78, 161, 0.03);
+  }
+
+  &__wrapper {
+    @apply mr-auto flex flex-col gap-2;
+  }
+
+  &__title {
+    @apply text-[13px] font-light leading-tight text-[#C0C6D1];
+  }
+
+  &__text {
+    @apply text-[11px] uppercase text-[#595962];
+  }
+}

@@ -1,0 +1,77 @@
+.account-card {
+  @apply flex cursor-pointer items-center;
+  position: relative;
+  &__image {
+    @apply mr-2 rounded-full;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-1 leading-none;
+  }
+
+  &__title {
+    @apply text-nowrap text-xs text-[#59B2A8];
+  }
+
+  &__subtitle {
+    @apply text-nowrap text-xs text-[#595962];
+  }
+
+  &__dropdown {
+    @apply ml-[6px] flex w-4 items-center justify-center rounded-sm;
+  }
+  &__dropdown-wrapper {
+    background: rgba(192, 198, 209, 0.04);
+    position: absolute;
+    top: calc(100% + 5px);
+    background: #141619;
+    border-radius: 6px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    div {
+      padding: 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      color: #8a8a98;
+
+      &:hover {
+        background: #ffffff0a;
+        path {
+          fill: #59b3a8;
+        }
+      }
+      path {
+        transition: all 0.3s;
+        fill: #595962;
+      }
+    }
+  }
+  .account-card__icon {
+    transition: all 0.3s;
+  }
+  &:focus {
+    .account-card__dropdown-wrapper {
+      opacity: 1;
+      visibility: visible;
+    }
+    .account-card__icon {
+      transform: rotate(180deg);
+    }
+  }
+}

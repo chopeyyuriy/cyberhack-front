@@ -1,0 +1,13 @@
+.products-unavailable-banner {
+  @apply flex h-[50px] w-full items-center gap-3 rounded p-3;
+  background: url("../../../assets/images/profile/purchases-banner-bg.svg")
+    center / cover no-repeat;
+
+  &__title {
+    @apply mr-auto text-[13px] text-[#C0C6D1];
+  }
+
+  &__button {
+    @apply cursor-pointer rounded bg-[#0E1012] p-2 text-[13px] text-[#C0C6D1] transition-opacity duration-300 hover:opacity-80;
+  }
+}

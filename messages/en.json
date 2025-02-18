@@ -1,0 +1,483 @@
+{
+  "header": {
+    "catalog": "Cheats catalog",
+    "accounts": "Game Accounts",
+    "login": "Log In"
+  },
+  "faq": {
+    "title": "FAQ & Support",
+    "description": "Be sure to update and download all drivers<br />and necessary programs",
+    "packet": "COMPONENT PACKAGE",
+    "popular": "POPULAR QUESTIONS",
+    "drivers": {
+      "wss": "Auto Power Off Windows Smart Screen",
+      "defender": "Managing Windows Protector",
+      "uac": "Accounts with auto-disable (UAC)",
+      "boot": "Disable Secure Boot in bios",
+      "uefi": "Enable UEFI in BIOS",
+      "anyDesk": "AnyDesk Remote Access",
+      "screen": "Screenshot of your problem",
+      "teamViewer": "Teamviewer Remote Access",
+      "winRar": "Working with WinRar archives"
+    },
+    "sidebar": {
+      "drivers": {
+        "title": "Drivers and programs",
+        "text": "Be sure to update and download all drivers and necessary programs"
+      },
+      "questions": {
+        "title": "Popular questions",
+        "text": "You will find the most frequently asked questions"
+      },
+      "ticket": {
+        "title": "Create ticket",
+        "text": "Our support team will contact you as soon as possible"
+      }
+    },
+    "view": "View",
+    "download": "Download",
+    "recomend": "RECOMMENDED DRIVERS",
+    "help": "SUPPORT PROGRAMS",
+    "banner": "Also, if you have anti-readers like FaceIt or ESEA installed, they should be uninstalled! If you have Valorant installed on your computer, uninstall Riot Guard (This item is for cheats for all games except Valorant)"
+  },
+  "home": {
+    "navigation": {
+      "faq": "FAQ & Support",
+      "news": "News",
+      "guarantees": "Our warranty"
+    },
+    "search": {
+      "placeholder": "Search product",
+      "result": "Search results",
+      "category": "Category",
+      "gameAccounts": "Game accounts",
+      "gameAccount": "Game account",
+      "cheats": "Cheats",
+      "game": "Game",
+      "goto": "Go to"
+    },
+    "header": {
+      "account": {
+        "subtitle": "My profile"
+      }
+    },
+    "favourite": {
+      "title": "Favorite sections",
+      "text": "Wide selection of private cheats for games",
+      "button": "Go to catalog"
+    },
+    "selections": {
+      "title": "CyberHack selections",
+      "text": "Wide selection of private cheats for games",
+      "list": "Game list"
+    },
+    "accounts": {
+      "title": "Need a new account?",
+      "text": "Our products are the safest solutions for those who want to play their favorite game with cheats",
+      "button": "Account Store"
+    },
+    "introduction": {
+      "title": "Huge selection<br></br>of cheats",
+      "highlight": "&nbsp;for<br/>favourite games",
+      "description": "Our products are the safest solutions for those who want to play their favorite game with cheats",
+
+      "buttons": {
+        "select_cheats": "Select cheats",
+        "accounts_store": "Account store"
+      },
+
+      "advantages": {
+        "titles": {
+          "prices": "Affordable prices",
+          "support": "Free support",
+          "choose": "Big choice",
+          "comfortable": "Comfortable payment"
+        },
+        "descriptions": {
+          "prices": "Quality merchandise for your pleasure and convenience!",
+          "support": "Get free support for any questions 24/7.",
+          "choose": "Find the perfect product for your needs",
+          "comfortable": "Multiple payment methods for your convenience!"
+        }
+      }
+    }
+  },
+  "catalog": {
+    "sort": {
+      "label": "Sort",
+      "popular": "Popular games",
+      "all": "All games",
+      "new": "New games"
+    },
+    "platform": {
+      "label": "Platform"
+    },
+    "categories": {
+      "label": "Categories",
+      "pmt": "PMT Games",
+      "shooters": "Shooters",
+      "moba": "MOBA",
+      "offline": "Offline"
+    },
+    "search": "Search game"
+  },
+  "game": {
+    "back": "Go to catalog",
+    "status": {
+      "label": "Status",
+      "version": "Game version",
+      "all": "All"
+    },
+    "sort": {
+      "label": "Sort",
+      "new": "New ones first",
+      "popular": "Popular first",
+      "price": {
+        "asc": "Cheap ones first",
+        "desc": "Dear ones first"
+      }
+    },
+    "search": "Search for products",
+    "startWith": "Starting from",
+    "cheatsFor": "Cheats for"
+  },
+  "product": {
+    "back": "Back to catalog",
+    "nav": {
+      "label": "Navigation",
+      "media": "Media",
+      "functional": "Functional",
+      "updates": "Updates",
+      "systemRequirements": "System requirements",
+      "reviews": "Reviews"
+    },
+    "cheatFor": "Cheat for",
+    "description": {
+      "subtitle": "In this section we provide an overview of all the main features",
+      "updates": "Stay up to date with all changes! Here you will find information about the latest product updates!"
+    },
+    "details": {
+      "label": "Order details",
+      "price": {
+        "label": "Regional prices",
+        "day": "days",
+        "fee": "The commission in the payment system may differ from the price on our website",
+        "price": "Price",
+        "pay": "Go to payment",
+        "policy": "I agree with the terms of the user agreement"
+      }
+    },
+    "reviews": {
+      "leave": "Leave review",
+      "noAuthMesssage": "You can leave a review by logging into the site",
+      "modal": {
+        "title": "Leave review",
+        "text": "Write your review about the product",
+        "variants": {
+          "select": "Choose one of the options",
+          "0": "Good product",
+          "1": "Good price",
+          "2": "Recommend product",
+          "3": "Good functionality",
+          "4": "Didn't like it",
+          "5": "I don't recommend",
+          "6": "Bad functionality",
+          "7": "Got banned"
+        },
+        "textarea": {
+          "label": "Write your useful review",
+          "placeholder": "Enter your text"
+        },
+        "submit": "Leave review"
+      }
+    }
+  },
+  "accounts": {
+    "title": "Account Store",
+    "text": "Welcome to the Cyber ​​Hack website, where you can buy game accounts directly<br />without overpayments.",
+    "platform": "Platform",
+    "sort": {
+      "label": "Sort",
+      "new": "New ones first",
+      "popular": "Popular first",
+      "price": {
+        "asc": "Cheap ones first",
+        "desc": "Dear ones first"
+      }
+    },
+    "search": "Search account",
+    "gameAccount": "Game account",
+    "startWith": "Starting from"
+  },
+  "account": {
+    "nav": {
+      "label": "Navigation",
+      "media": "Media",
+      "description": "Description"
+    },
+    "description": {
+      "label": "In this section we provide an overview of all the main features"
+    },
+    "gameAccount": "Game account"
+  },
+  "news": {
+    "title": "News",
+    "text": "Be sure to update and download all drivers<br />and necessary programs",
+    "search": "Search news",
+    "category": {
+      "label": "Category",
+      "all": "All"
+    }
+  },
+  "warranty": {
+    "title": "Our guarantees",
+    "text": "For questions regarding cooperation or any information, you can contact us at the following contacts:",
+    "returnMoney": {
+      "label": "Refund",
+      "text": "We give a money back guarantee if a product purchased on our website does not start or does not want to work"
+    },
+    "reviews": {
+      "label": "Reviews",
+      "text": "We have an open VKontakte group where you can find reviews from our clients"
+    },
+    "safety": {
+      "label": "Reliability",
+      "text": "We will always answer your questions and help you decide on the choice of a particular product. Just write :)"
+    },
+    "webMoney": {
+      "label": "WebMoney certificate",
+      "text": "We have a personal certificate in the Webmoney system, which provides an additional guarantee"
+    },
+    "support": {
+      "label": "Technical support",
+      "text": "We provide FREE technical support to our users."
+    },
+    "oplata": {
+      "label": "Oplata.info",
+      "text": "You can always leave negative feedback on oplata.info and ask for a solution to your problem. We value our reputation."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "termsOfUse": {
+    "title": "Terms of use"
+  },
+  "auth": {
+    "title": "Log In",
+    "text": "Are you new user?",
+    "register": "Create account",
+    "email": {
+      "label": "E-mail address",
+      "placeholder": "Enter e-mail"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter password"
+    },
+    "remember": "Remember me?",
+    "forgot": "Forgot password?",
+    "submit": "Log In",
+    "alternative": "Or login using"
+  },
+  "resetPassword": {
+    "title": "Reset password",
+    "text": "Already have an account?",
+    "auth": "Log In",
+    "email": {
+      "label": "E-mail address",
+      "placeholder": "Enter e-mail"
+    },
+    "hint": "Forgot your password? Enter your Email or username. You will receive a link to create a new password by email.",
+    "submit": "Reset password"
+  },
+  "register": {
+    "step": "Step",
+    "from": "/",
+    "title": "Register",
+    "text": "Already have an account?",
+    "auth": "Log In",
+    "email": {
+      "label": "E-mail address",
+      "placeholder": "Enter e-mail"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter password"
+    },
+    "username": {
+      "label": "Username",
+      "placeholder": "Enter username"
+    },
+    "avatar": {
+      "label": "Profile avatar",
+      "select": "Select",
+      "modal": {
+        "title": "Select avatar",
+        "text": "Select the topic of the issue you want to solve",
+        "submit": "Save"
+      }
+    },
+    "end": "Complete",
+    "submit": "Continue",
+    "hint": "Your personal data will be used to simplify your further interaction with the site, manage access to your account and for other purposes described in the privacy policy document."
+  },
+  "profile": {
+    "changePassword": {
+      "title": "Change password",
+      "oldPassword": {
+        "placeholder": "Enter old passwrd"
+      },
+      "password": {
+        "placeholder": "Enter passwrd"
+      },
+      "repeatPassword": {
+        "placeholder": "Repeat password"
+      },
+      "submit": "Confirm"
+    },
+    "nav": {
+      "label": "Navigation",
+      "profile": "Your profile",
+      "support": "Online support",
+      "reviews": "Your reviews",
+      "security": "Security",
+      "cooperation": "Cooperation",
+      "logout": "Log Out"
+    },
+    "header": {
+      "title": "Hello,",
+      "text": "You are in your personal account. Here you can view your activity on the site, get free support or participate in promotions"
+    },
+    "profile": {
+      "support": {
+        "title": "Technical support is always in touch!",
+        "text": "Contact our chatbot for instant assistance and resolution of any questions."
+      },
+      "personal": {
+        "title": "Personal data",
+        "username": {
+          "title": "Username",
+          "text": "Used in reviews and technical support"
+        },
+        "email": {
+          "title": "E-mail address",
+          "text": "Used for authorization"
+        },
+        "save": "Save"
+      },
+      "avatar": {
+        "title": "Profile avatar",
+        "text": "Choose a profile picture that best expresses your personality and style.",
+        "select": "Select"
+      },
+      "email": {
+        "text": "Please confirm your mailing address",
+        "sent": "We've sent you a confirmation email",
+        "confirm": "Confirm",
+        "success": "Email successfully verified"
+      },
+      "shop": {
+        "title": "Store settings",
+        "language": {
+          "label": "Site language",
+          "text": "Select the language you want to use"
+        }
+      },
+      "integrations": {
+        "title": "Integrations",
+        "status": {
+          "notConnected": "Not connected",
+          "connected": "Success"
+        },
+        "connect": "Connect",
+        "disable": "Disable",
+        "vk": {
+          "title": "VKontakte account",
+          "text": "Link your VKontakte in order to log in to the site and participate in promotions"
+        },
+        "discord": {
+          "title": "Discord account",
+          "text": "Link your Discord in order to log in to the site and participate in promotions"
+        }
+      }
+    },
+    "cooperation": {
+      "title": {
+        "first": "Do you want to",
+        "selected": "earn money",
+        "last": "with us?"
+      },
+      "text": "We are ready to offer you the following cooperation options",
+      "funpay": {
+        "title": "Selling via funpay",
+        "text": "If you have an upgraded Funpay account, you can sell our products"
+      },
+      "digiseller": {
+        "title": "Digiseller Affiliate",
+        "text": "Sell ​without risk or investment through the Digiseller affiliate program."
+      },
+      "opt": {
+        "title": "Wholesale",
+        "text": "If you have a ready-made audience, website or platform, we are ready to sell keys at wholesale prices"
+      },
+      "createTicket": "Create ticket",
+      "hint": {
+        "first": "Earn up",
+        "selected": "to 50%",
+        "last": ", a system of discounts and even more benefits. Create a ticket in the “Collaborations” section and we will contact you!"
+      }
+    },
+    "security": {
+      "security": {
+        "title": "Security",
+        "password": {
+          "title": "Password",
+          "text": "Increase security by choosing a stronger password",
+          "change": "Change"
+        }
+      },
+      "twoFactor": {
+        "title": "Two-factor Auth",
+        "email": {
+          "title": "E-mail",
+          "text": "Receive 2FA codes by email."
+        },
+        "google": {
+          "title": "Google Auth",
+          "text": "Receive 2FA codes in the app"
+        }
+      },
+      "install": "Install"
+    },
+    "reviews": {
+      "title": "Your reviews",
+      "text": "Reviews from our clients are the best advertising. Share your opinion about our products or services in a special section. We always welcome your feedback!",
+      "labels": {
+        "your": "Your review",
+        "status": "Status/Date"
+      }
+    }
+  },
+  "footer": {
+    "text": "Our products are as safe as possible",
+    "cooperation": {
+      "start": "Cooperation with",
+      "label": "Cooperation",
+      "question": "Do you want to sell your product with us?"
+    },
+    "nav": {
+      "label": "Navigation",
+      "catalog": "Cheats catalog",
+      "accounts": "Game accounts",
+      "news": "News",
+      "help": "Help"
+    },
+    "other": {
+      "label": "Other",
+      "agreement": "Terms of use",
+      "policy": "Privacy Policy",
+      "warranty": "Our guarantees"
+    }
+  }
+}

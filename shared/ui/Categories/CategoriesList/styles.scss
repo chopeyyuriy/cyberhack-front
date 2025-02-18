@@ -1,0 +1,47 @@
+@import "../../../assets/styles/animations.scss";
+
+.categories {
+  @apply flex h-[52px] w-full items-center bg-[#111215] max-md:hidden;
+  animation: slide-top 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  &-list {
+    @apply flex h-[52px] items-center overflow-x-scroll;
+    scrollbar-width: none;
+
+    &__item {
+      @apply relative flex flex-shrink-0 items-center gap-2;
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        filter: blur(31.4px);
+        background: rgb(89, 179, 168);
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      &:hover {
+        .categories-list__title {
+          color: #95b6b3;
+        }
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__title {
+      @apply block whitespace-nowrap text-sm text-[#8A8A98] transition-colors duration-300;
+    }
+
+    &__slash {
+      @apply mx-3 block;
+    }
+  }
+}

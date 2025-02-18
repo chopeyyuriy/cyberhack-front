@@ -1,0 +1,30 @@
+@import "../../../assets/styles/animations.scss";
+
+.banners-list {
+  @apply mb-[38px] mt-[18px] w-full gap-5;
+
+  animation: slide-top 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  &__item {
+    @apply w-full max-w-[452px] cursor-pointer;
+  }
+
+  &__image {
+    width: 100%;
+    height: 124px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 12px;
+
+  &-bullet {
+    background: rgba(255, 255, 255, 0.06) !important;
+    &-active {
+      background: #324545 !important;
+    }
+  }
+}

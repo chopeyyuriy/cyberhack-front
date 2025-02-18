@@ -1,0 +1,44 @@
+<svg width="64.000000" height="58.003448" viewBox="0 0 64 58.0034" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_405_12175_dd" x="0.000000" y="9.184570" width="64.000000" height="48.818878" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="28.6667"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="1.33333"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_2"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="22.6667"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.051 0"/>
+			<feBlend mode="normal" in2="effect_innerShadow_2" result="effect_innerShadow_3"/>
+		</filter>
+		<filter id="filter_405_12176_dd" x="42.970703" y="28.108459" width="11.885742" height="11.777550" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="0"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="2"/>
+			<feGaussianBlur stdDeviation="0.666667"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_2"/>
+		</filter>
+	</defs>
+	<path id="Subtract" d="M21.8516 4.97595L32.9092 0.961327C41.1797 -2.04153 50.3301 2.22518 53.3457 10.4913C54.1553 12.7104 54.4414 14.9922 54.2646 17.2012C51.8926 15.7982 49.125 14.9931 46.1699 14.9931L14.375 14.9931C12.8701 14.9931 11.4141 15.2018 10.0342 15.5918C12.3633 10.8295 16.4707 6.92947 21.8516 4.97595Z" clip-rule="evenodd" fill="#8ADAD1" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<g filter="url(#filter_405_12175_dd)">
+		<path id="Rectangle 29" d="M12 9.18L52 9.18C58.62 9.18 64 14.55 64 21.18L64 46C64 52.63 58.62 58 52 58L12 58C5.37 58 0 52.63 0 46L0 21.18C0 14.55 5.37 9.18 12 9.18Z" fill="#FFFFFF" fill-opacity="0.030000" fill-rule="nonzero"/>
+	</g>
+	<g filter="url(#filter_405_12176_dd)">
+		<ellipse id="Ellipse 3" cx="48.913086" cy="33.997238" rx="5.942857" ry="5.888776" fill="#FFFFFF" fill-opacity="0.100000"/>
+	</g>
+</svg>

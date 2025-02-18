@@ -1,0 +1,12 @@
+.auth-input {
+  @apply flex cursor-pointer flex-col gap-[6px];
+
+  &__label {
+    @apply text-[15px] font-light text-[#8A8A98];
+  }
+
+  &__input {
+    width: 100%;
+    @apply rounded-md border-2 border-[#1F1F23] bg-transparent p-3 text-[15px] font-light text-[#8A8A98] bg-transparent outline-none;
+  }
+}

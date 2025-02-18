@@ -1,0 +1,22 @@
+.auth-textarea {
+  @apply flex cursor-pointer flex-col gap-[6px];
+  width: 100%;
+
+  &__label {
+    @apply text-[15px] font-light text-[#8A8A98];
+  }
+
+  &__wrapper {
+    @apply rounded-md border-2 border-[#1F1F23] bg-transparent p-3 text-[15px] font-light text-[#8A8A98] outline-none;
+  }
+  &__input {
+    @apply bg-transparent outline-none h-[128px];
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+
+    &::placeholder {
+      @apply text-[#8A8A9880] text-[15px]
+    }
+  }
+}

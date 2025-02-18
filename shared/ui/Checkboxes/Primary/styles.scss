@@ -1,0 +1,15 @@
+.primary-checkbox {
+  @apply relative h-[22px] w-[36px] cursor-pointer rounded-[32px]  bg-white/[0.04] p-1 transition-all duration-300 ease-linear;
+
+  &_active {
+    @apply bg-[#59B3A8];
+
+    .primary-checkbox__circle {
+      transform: translateX(18px);
+    }
+  }
+
+  &__circle {
+    @apply absolute left-0 h-[14px] w-[14px] translate-x-1 rounded-full bg-[#E3E5EB] transition-all duration-300 ease-linear;
+  }
+}

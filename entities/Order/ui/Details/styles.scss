@@ -1,0 +1,118 @@
+.order-details {
+  @apply flex w-[360px] min-w-[360px] flex-col gap-[18px] rounded-md bg-[#13141599] p-6;
+  backdrop-filter: blur(12px);
+
+  &__container {
+    @apply flex flex-col gap-3;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-[6px];
+  }
+
+  &__full {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    p {
+      color: #C0C6D1;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .slider-checkbox {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__title {
+    @apply font-light text-[#C0C6D1];
+  }
+
+  &__inline {
+    @apply flex items-center justify-between;
+  }
+
+  &__subtitle {
+    @apply text-[13px] text-[#595962];
+  }
+
+  &__icon {
+    @apply flex h-[14px] w-[14px] cursor-pointer items-center justify-center rounded-full bg-[#595962] text-[10px] font-medium;
+  }
+
+  &__buttons {
+    @apply flex items-center gap-1;
+  }
+
+  &__button {
+    @apply flex w-full cursor-pointer items-center justify-center gap-2 rounded py-3 text-[13px] text-[#8A8A98];
+
+    transition:
+      opacity 0.3s,
+      background 0.3s;
+    background: rgba(255, 255, 255, 0.04);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &_active {
+      background: linear-gradient(
+        90deg,
+        rgb(255, 238, 238),
+        rgb(221, 239, 187) 100%
+      );
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__text {
+    @apply block;
+  }
+
+  &-question {
+    @apply mr-2 flex h-[36px] w-4 min-w-4 items-center justify-center rounded-sm bg-[];
+    background: linear-gradient(
+      180deg,
+      rgba(225, 197, 139, 0.02),
+      rgba(123, 108, 76, 0) 100%
+    );
+
+    &__icon {
+      @apply block h-[14px] w-[14px];
+    }
+  }
+
+  &__description {
+    @apply text-[13px] text-[#595962];
+  }
+
+  &__line {
+    @apply mb-3;
+    border: 1px dashed rgba(255, 255, 255, 0.08);
+  }
+
+  &__cost {
+    @apply text-[17px] text-[#595962];
+  }
+
+  &__price {
+    @apply text-[28px] text-[#C0C6D1];
+  }
+
+  &__primary_button {
+    @apply mt-3;
+    transition: .25s;
+
+    &_disabled {
+      opacity: 0.25;
+      pointer-events: none;
+    }
+  }
+}

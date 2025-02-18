@@ -1,0 +1,16 @@
+.guarantees {
+  &__container {
+    max-width: 75%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__card {
+    backdrop-filter: blur(6px);
+  }
+
+  &__skin {
+    position: absolute;
+    right: 0;
+  }
+}

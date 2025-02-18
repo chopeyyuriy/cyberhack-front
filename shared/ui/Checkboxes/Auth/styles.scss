@@ -1,0 +1,11 @@
+.auth-checkbox {
+  @apply flex h-4 w-4 cursor-pointer items-center justify-center rounded-full border border-[#E1C58B];
+
+  &__inner {
+    @apply h-2 w-2 rounded-full transition-colors duration-300;
+
+    &_active {
+      @apply bg-[#E1C58B];
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.news {
+  &__image {
+    position: absolute;
+    width: 747px;
+    height: 540px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../../../shared/assets/images/news/bg.png');
+    z-index: -1;
+    right: -10%;
+    top: 184px;
+  }
+}
+
+.news-content {
+  .search {
+    background: rgba(14, 16, 17, 0.9);
+    backdrop-filter: blur(12px);
+    border-radius: 6px;
+  }
+}

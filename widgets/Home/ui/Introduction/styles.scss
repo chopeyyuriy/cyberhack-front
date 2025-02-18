@@ -1,0 +1,98 @@
+@import "../../../../shared/assets/styles/animations.scss";
+
+.introduction {
+  @apply relative min-h-[541px] overflow-hidden pt-11 max-md:h-[680px]  md:pt-[68px];
+
+  background: url("../../../../shared/assets/images/home/introduction/bg.png")
+    center / cover no-repeat;
+
+  &__container {
+    @apply flex items-center justify-between;
+  }
+
+  &__wrapper {
+    @apply flex h-full flex-col justify-center gap-3;
+    animation: slide 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  &__title {
+    @apply text-[54px] leading-tight text-[#C0C6D1];
+  }
+
+  &__highlight {
+    @apply text-[#95B6B3];
+  }
+
+  &__description {
+    @apply w-full max-w-[688px] text-[#595962];
+  }
+
+  &__buttons {
+    @apply mt-11 flex items-center gap-11 px-3;
+  }
+
+  &__button {
+    @apply relative z-10 flex h-[46px] items-center justify-center bg-[#E1C58B] text-center text-[13px] text-[#0E1012] transition-opacity duration-300 hover:opacity-80;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 12px;
+      height: 46px;
+      background: url("../../../../shared/assets/icons/introduction/button-slice-yellow.svg")
+        center / contain no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      content: "";
+      width: 12px;
+      height: 46px;
+      background: url("../../../../shared/assets/icons/introduction/button-slice-yellow.svg")
+        center / contain no-repeat;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(100%) scale(-1);
+    }
+
+    &_green {
+      @apply bg-[#59B3A8] max-md:hidden;
+
+      &::before {
+        background: url("../../../../shared/assets/icons/introduction/button-slice-green.svg");
+      }
+
+      &::after {
+        background: url("../../../../shared/assets/icons/introduction/button-slice-green.svg");
+      }
+    }
+  }
+
+  &__image {
+    @apply bottom-0  right-[-27%] max-md:absolute;
+    width: 100%;
+    max-width: 682px;
+    aspect-ratio: 682 / 502;
+    animation: slide-back 0.5s ease-in-out;
+    z-index: -1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .introduction__buttons {
+    a:last-child {
+      display: none;
+    }
+  }
+
+  .introduction__image {
+    bottom: -5%;
+  }
+}
