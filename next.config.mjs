@@ -26,6 +26,14 @@ const nextConfig = {
       pathname: "/storage/**",
     },
   ],
+  async rewrites() {
+    return [
+      {
+        source: "/php/:path*",
+        destination: "http://localhost:3000/:path*",
+      },
+    ];
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

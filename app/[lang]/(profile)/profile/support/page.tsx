@@ -14,16 +14,29 @@ import {
   SeparatorLine,
   SupportBanner,
 } from "@/shared";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TicketModal } from "@/features/Account";
-import { getTicketsListApi } from "@/entities/Ticket/api";
+import TicketsList from "@/widgets/Profile/ui/TicketsList";
+import { useTranslations } from "next-intl";
+import { getUserTickets } from "@/entities/Ticket/api";
+import { IUserTicketsListResp } from "@/shared/types/Ticket";
+import { Pagination } from "@/shared/ui/Pagination";
 
-export const revalidate = 60 * 15;
+// export const revalidate = 60 * 15;
 
-export default async function ProfileSupportPage() {
+export default function ProfileSupportPage() {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
+  const [selectedTicket, setSelectedTicket] = useState<string | undefined>();
+  const t = useTranslations("tickets");
+  const [tickets, setTickets] = useState<IUserTicketsListResp | undefined>();
 
-  const tickets = await getTicketsListApi();
+  const handleGetTickets = (page = 1) => {
+    getUserTickets(page).then((resp) => setTickets(resp?.data));
+  };
+
+  useEffect(() => {
+    handleGetTickets();
+  }, []);
 
   return (
     <div className="support">
@@ -38,73 +51,31 @@ export default async function ProfileSupportPage() {
                 unbounded.className,
               )}
             >
-              Онлайн поддержка
+              {t("support")}
             </h2>
             <span className="support__number flex h-6 w-6 items-center justify-center rounded-md bg-[#95B6B3] text-[11px] font-semibold text-[#0E1012]">
-              12
+              {tickets?.total ?? 0}
             </span>
           </div>
           <PrimaryButton
-            text="Создать тикет"
+            text={t("create")}
             textColor="##0E1012"
             color="#C0C6D1"
             click={() => setIsModalOpened(true)}
           />
         </div>
         {isModalOpened && <TicketModal close={() => setIsModalOpened(false)} />}
-        <PurchasesList
-          topics={["НОМЕР", "ВОПРОС", "ДАТА", "СТАТУС"]}
-          items={[
-            {
-              image: "placeholder",
-              title: "Medusa",
-              game: "Escape From Tarkov",
-              price: 12.99,
-              date: "29 Мар 2024 в 12:30",
-              status: PURCHASE_STATUS.DELIVERED,
-            },
-            {
-              image: "placeholder",
-              title: "Medusa",
-              game: "Escape From Tarkov",
-              price: 12.99,
-              date: "29 Мар 2024 в 12:30",
-              status: PURCHASE_STATUS.DELIVERED,
-            },
-            {
-              image: "placeholder",
-              title: "Medusa",
-              game: "Escape From Tarkov",
-              price: 12.99,
-              date: "29 Мар 2024 в 12:30",
-              status: PURCHASE_STATUS.DELIVERED,
-            },
-            {
-              image: "placeholder",
-              title: "Medusa",
-              game: "Escape From Tarkov",
-              price: 12.99,
-              date: "29 Мар 2024 в 12:30",
-              status: PURCHASE_STATUS.DELIVERED,
-            },
-            {
-              image: "placeholder",
-              title: "Medusa",
-              game: "Escape From Tarkov",
-              price: 12.99,
-              date: "29 Мар 2024 в 12:30",
-              status: PURCHASE_STATUS.DELIVERED,
-            },
-            {
-              image: "placeholder",
-              title: "Medusa",
-              game: "Escape From Tarkov",
-              price: 12.99,
-              date: "29 Мар 2024 в 12:30",
-              status: PURCHASE_STATUS.DELIVERED,
-            },
-          ]}
+        <TicketsList
+          topics={[t("number"), t("question"), t("date"), t("status")]}
+          items={tickets?.data ?? []}
         />
+        {(tickets?.last_page ?? 0) > 1 ? (
+          <Pagination
+            current={tickets?.current_page ?? 1}
+            max={tickets?.last_page ?? 1}
+            change={handleGetTickets}
+          />
+        ) : null}
       </MainContainer>
     </div>
   );

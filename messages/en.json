@@ -479,5 +479,47 @@
       "policy": "Privacy Policy",
       "warranty": "Our guarantees"
     }
+  },
+  "tickets": {
+    "status": "Status",
+    "open": "Open",
+    "done": "Resolved",
+    "inProgress": "In Progress",
+    "close": "Close Ticket",
+    "closed": "Ticket Closed",
+    "describeProblem": "Describe your problem",
+    "send": "Send",
+    "types": {
+      "0": {
+        "title": "Software Not Working",
+        "description": "Here you can report issues with the software"
+      },
+      "1": {
+        "title": "Payment Issue",
+        "description": "Resolve issues with product or service payments"
+      },
+      "2": {
+        "title": "HWID Reset",
+        "description": "Here you can request a Hardware ID reset"
+      },
+      "3": {
+        "title": "Partnership",
+        "description": "Want to sell our products and earn money?"
+      },
+      "4": {
+        "title": "Other Issue",
+        "description": "If it does not fit into other categories."
+      }
+    },
+    "support": "Online Support",
+    "create": "Create Ticket",
+    "number": "NUMBER",
+    "question": "QUESTION",
+    "date": "DATE",
+    "opened": "Opened",
+    "closedStatus": "Closed",
+    "сreating": "Creating a Ticket",
+    "selectType": "Select the topic of the issue you want to resolve",
+    "success": "Ticket has been successfully created"
   }
 }

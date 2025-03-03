@@ -4,4 +4,7 @@
 
   background: url("../../../shared/assets/images/profile/bg.svg") center / cover
     no-repeat;
+  &__ticket {
+    padding-bottom: 0;
+  }
 }

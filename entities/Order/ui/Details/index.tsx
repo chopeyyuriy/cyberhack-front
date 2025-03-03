@@ -10,8 +10,8 @@ import OrderSelect from "@/shared/ui/Selects/Order";
 import Image from "next/image";
 import "./styles.scss";
 import { useTranslations } from "next-intl";
-import 'react-tippy/dist/tippy.css'
-import { Tooltip } from 'react-tippy';
+import "react-tippy/dist/tippy.css";
+import { Tooltip } from "react-tippy";
 import { useLocale } from "next-intl";
 
 export interface IRate {
@@ -39,87 +39,98 @@ const OrderDetails: FC<Props> = ({
   withoutTitle,
   rates,
   priceHint,
-  wallet
+  wallet,
 }) => {
   const lang = useLocale();
 
-  const t = useTranslations('product');
+  const t = useTranslations("product");
 
   const [selectedItem, selectItem] = useState<number>(0);
   const [confirm, setConfirm] = useState<boolean>(true);
   const [extraValue, setExtraValue] = useState<number>(0);
 
   const regions = Array.from(new Set(rates.map(({ region }) => region)));
-  const hasCIS = regions.includes('cis');
-  const hasGlobal = regions.includes('global');
+  const hasCIS = regions.includes("cis");
+  const hasGlobal = regions.includes("global");
 
-  const [currentRegion, setCurrentRegion] = useState(hasCIS ? 'cis' : 'global');
+  const [currentRegion, setCurrentRegion] = useState(hasCIS ? "cis" : "global");
 
   const getPrice = (value: number) => {
     const usd = wallet.usd;
-    if (lang === 'ru') {
+    if (lang === "ru") {
       return value;
     }
     return (value / usd).toFixed(2);
-  }
+  };
 
-  const currency = lang == 'ru' ? '₽' : '$';
+  const currency = lang == "ru" ? "₽" : "$";
 
   const hasExtra = useMemo(() => {
     return rates.filter(({ extra_value }) => extra_value).length > 0;
   }, [rates]);
 
   const currentRates = useMemo(() => {
-    return rates.filter(({ region, extra_value }) => region === currentRegion && (extra_value == extraValue + 1 || !extra_value)).map((rate) => ({
-      title: !withoutTitle ? `${rate.period} ${t('details.price.day')}` : '',
-      price: getPrice(rate.cost * (1 - rate.sale)),
-      discount: rate.sale,
-      oldPrice: rate.sale ? getPrice(rate.cost) : undefined,
-      currency: currency,
-      url: rate.url
-    }));
+    return rates
+      .filter(
+        ({ region, extra_value }) =>
+          region === currentRegion &&
+          (extra_value == extraValue + 1 || !extra_value),
+      )
+      .map((rate) => ({
+        title: !withoutTitle ? `${rate.period} ${t("details.price.day")}` : "",
+        price: getPrice(rate.cost * (1 - rate.sale)),
+        discount: rate.sale,
+        oldPrice: rate.sale ? getPrice(rate.cost) : undefined,
+        currency: currency,
+        url: rate.url,
+      }));
   }, [rates, currentRegion, extraValue]);
 
   const currentRate = currentRates[selectedItem];
 
-  const gotoPayment = () => window.open(currentRate.url, '_blank');
+  const gotoPayment = () => window.open(currentRate.url, "_blank");
 
   const selectRegion = (region: string) => {
     setCurrentRegion(region);
     selectItem(0);
-  }
+  };
 
   return (
     <div className="order-details">
       <h2 className={cn("order-details__title", unbounded.className)}>
-        {t('details.label')}
+        {t("details.label")}
       </h2>
       <SeparatorLine />
       <div className="order-details__container">
         <div className="order-details__wrapper">
-          {
-            !!extraFullName && !!extraLiteName && hasExtra &&
-            <div className="order-details__full mb-3" style={{justifyContent: 'flex-start'}}>
+          {!!extraFullName && !!extraLiteName && hasExtra && (
+            <div
+              className="order-details__full mb-3"
+              style={{ justifyContent: "flex-start" }}
+            >
               <p>{extraFullName}</p>
               <SliderCheckbox checked={extraValue} onChange={setExtraValue} />
               <p>{extraLiteName}</p>
             </div>
-          }
+          )}
           <div className="order-details__inline">
-            <span className="order-details__subtitle">{t('details.price.label')}</span>
-            {
-              priceHint &&
-              <Tooltip
-                title={priceHint}
-              >
+            <span className="order-details__subtitle">
+              {t("details.price.label")}
+            </span>
+            {priceHint && (
+              <Tooltip title={priceHint}>
                 <span className="order-details__icon">?</span>
               </Tooltip>
-            }
+            )}
           </div>
           <div className="order-details__buttons">
-            {
-              hasCIS &&
-              <button className={cn('order-details__button', { 'order-details__button_active': currentRegion === 'cis' })} onClick={() => selectRegion('cis')}>
+            {hasCIS && (
+              <button
+                className={cn("order-details__button", {
+                  "order-details__button_active": currentRegion === "cis",
+                })}
+                onClick={() => selectRegion("cis")}
+              >
                 <Image
                   src={require("@/shared/assets/icons/ru.svg")}
                   alt="flag"
@@ -129,10 +140,14 @@ const OrderDetails: FC<Props> = ({
                 />
                 <span className="order-details__text">CIS</span>
               </button>
-            }
-            {
-              hasGlobal &&
-              <button className={cn('order-details__button', { 'order-details__button_active': currentRegion === 'global' })} onClick={() => selectRegion('global')}>
+            )}
+            {hasGlobal && (
+              <button
+                className={cn("order-details__button", {
+                  "order-details__button_active": currentRegion === "global",
+                })}
+                onClick={() => selectRegion("global")}
+              >
                 <Image
                   src={require("@/shared/assets/icons/eu.svg")}
                   alt="flag"
@@ -142,20 +157,10 @@ const OrderDetails: FC<Props> = ({
                 />
                 <span className="order-details__text">Global</span>
               </button>
-            }
+            )}
           </div>
         </div>
-        <div className="order-details__inline">
-          <span className="order-details__subtitle">{t('details.price.label')}</span>
-          {
-            priceHint &&
-            <Tooltip
-              title={priceHint}
-            >
-              <span className="order-details__icon">?</span>
-            </Tooltip>
-          }
-        </div>
+
         <OrderSelect
           selectedItem={selectedItem}
           selectItem={selectItem}
@@ -171,31 +176,33 @@ const OrderDetails: FC<Props> = ({
               alt="icon"
             />
           </div>
-          <p className="order-details__description">
-            {t('details.price.fee')}
-          </p>
+          <p className="order-details__description">{t("details.price.fee")}</p>
         </div>
         <span className="order-details__line" />
         <div className="order-details__inline">
-          <span className="order-details__cost">{t('details.price.price')}</span>
-          {
-            currentRate &&
+          <span className="order-details__cost">
+            {t("details.price.price")}
+          </span>
+          {currentRate && (
             <span className={cn("order-details__price", unbounded.className)}>
-              {currentRate.price}{currentRate.currency}
+              {currentRate.price}
+              {currentRate.currency}
             </span>
-          }
+          )}
         </div>
         <PrimaryButton
-          text={t('details.price.pay')}
+          text={t("details.price.pay")}
           color="#59B3A8"
           textColor="#0E1012"
-          classes={cn('order-details__primary_button', { 'order-details__primary_button_disabled': !confirm })}
+          classes={cn("order-details__primary_button", {
+            "order-details__primary_button_disabled": !confirm,
+          })}
           click={gotoPayment}
         />
         <div className="order-details__inline">
           <SliderCheckbox checked={confirm} onChange={setConfirm} />
           <p className="order-details__description ml-3">
-            {t('details.price.policy')}
+            {t("details.price.policy")}
           </p>
         </div>
       </div>

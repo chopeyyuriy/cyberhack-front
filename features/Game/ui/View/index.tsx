@@ -151,7 +151,6 @@ export const GameView: FC<Props> = ({
     window.location.replace(`/catalog/${item.path}`);
   };
 
-
   return (
     <div className="select-cheats__container mt-[18px] flex items-center gap-5 max-md:flex-col-reverse md:items-start">
       <div className="select-cheats__filters">

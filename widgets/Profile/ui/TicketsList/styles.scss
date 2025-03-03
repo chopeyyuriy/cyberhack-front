@@ -1,0 +1,136 @@
+.tickets-list {
+  @apply flex w-full flex-col gap-[2px];
+
+  &__top {
+    @apply grid gap-6 px-4 py-2 text-[11px] text-[#595962];
+    grid-template-columns:
+      minmax(min-content, 100px) minmax(min-content, 1fr) minmax(
+        min-content,
+        200px
+      )
+      100px;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    @apply h-[42px] w-[42px] rounded;
+  }
+
+  &__price {
+    @apply text-sm font-light text-[#C0C6D1];
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    color: #595962;
+  }
+
+  &__title {
+    @apply text-[13px] font-light text-[#C0C6D1];
+  }
+
+  &__description {
+    @apply text-[13px] text-[#595962];
+  }
+
+  &__list {
+    @apply flex w-full flex-col gap-[2px] border-t border-t-[white]/[.05];
+  }
+
+  &__item {
+    @apply grid cursor-pointer items-center gap-6 rounded p-4;
+    grid-template-columns:
+      minmax(min-content, 100px) minmax(min-content, 1fr) minmax(
+        min-content,
+        200px
+      )
+      100px;
+    &_secondary {
+      background: rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  &__id {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #8a8a98;
+  }
+  &__question {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    color: #c0c6d1;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 36px;
+      border-radius: 100px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__status {
+    padding: 0 4px;
+    background: #c84b5a0a;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    color: #c84b5a;
+    width: max-content;
+    &.open {
+      background: #5a9d690a;
+      color: #5a9d69;
+    }
+    &.inProgress {
+      background: #3b87c60a;
+      color: #3b87c6;
+    }
+  }
+  &__wrapper {
+    @apply flex items-center gap-3;
+  }
+
+  &__content {
+    @apply flex flex-col gap-1;
+  }
+}
+
+.tickets-empty {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 24px;
+  align-items: center;
+  img {
+    margin-bottom: 24px;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    text-align: center;
+    color: #595962;
+  }
+}

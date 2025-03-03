@@ -7,13 +7,17 @@ import {
   SeparatorLine,
 } from "@/shared";
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import cn from "classnames";
 
 import { unbounded } from "@/shared/fonts";
 
 import "./styles.scss";
+import { useLocale, useTranslations } from "next-intl";
+import { createUserTicket, getTicketsListApi } from "@/entities/Ticket/api";
+import { ITicket } from "@/shared/types/Ticket";
+import toast from "react-hot-toast";
 
 export enum TICKET_TYPE {
   SOFT_NOT_WORKING,
@@ -23,12 +27,57 @@ export enum TICKET_TYPE {
   ANOTHER_PROBLEM,
 }
 
+export const TICKET_TYPES = [
+  {
+    id: "1",
+    image: require("@/shared/assets/icons/soft.svg"),
+    bg: "linear-gradient(180deg, rgba(138, 218, 209, 0) 0%, rgba(138, 218, 209, 0.12) 100%)",
+  },
+  {
+    id: "2",
+    image: require("@/shared/assets/icons/payment.svg"),
+    bg: "linear-gradient(180deg, rgba(111, 181, 73, 0) 0%, rgba(111, 181, 73, 0.12) 100%)",
+  },
+  {
+    id: "3",
+    image: require("@/shared/assets/icons/chip.svg"),
+    bg: "linear-gradient(180deg, rgba(59, 135, 198, 0) 0%, rgba(59, 135, 198, 0.12) 100%)",
+  },
+  {
+    id: "4",
+    image: require("@/shared/assets/icons/colab.svg"),
+    bg: "linear-gradient(180deg, rgba(255, 206, 52, 0) 0%, rgba(255, 206, 52, 0.12) 100%)",
+  },
+  {
+    id: "5",
+    image: require("@/shared/assets/icons/another-problem.svg"),
+    bg: "linear-gradient(180deg, rgba(205, 209, 217, 0) 0%, rgba(205, 209, 217, 0.12) 100%)",
+  },
+];
 export interface ITicketModalProps {
   close: () => void;
 }
 
 const TicketModal: FC<ITicketModalProps> = ({ close }) => {
-  const [currentItem, setCurrentItem] = useState<TICKET_TYPE | null>(null);
+  const [currentItem, setCurrentItem] = useState<number | null>(null);
+  const t = useTranslations("tickets");
+  const locale = useLocale();
+  const [tickets, setTickets] = useState<ITicket[]>([]);
+
+  useEffect(() => {
+    getTicketsListApi().then((resp) => setTickets(resp.data));
+  }, []);
+
+  const handleCreateTicket = () => {
+    if (currentItem) {
+      createUserTicket(currentItem).then((resp) => {
+        if (resp.status === 200) {
+          toast.success(t("success"));
+          close();
+        }
+      });
+    }
+  };
 
   return (
     <ModalContainer>
@@ -43,11 +92,9 @@ const TicketModal: FC<ITicketModalProps> = ({ close }) => {
           />
           <div className="ticket-modal__wrapper">
             <h2 className={cn("ticket-modal__title", unbounded.className)}>
-              Создание тикета
+              {t("сreating")}
             </h2>
-            <span className="ticket-modal__description">
-              Выберите тему вопроса, который хотите решить
-            </span>
+            <span className="ticket-modal__description">{t("selectType")}</span>
           </div>
           <span className="ticket-modal__close" onClick={close}>
             <Image
@@ -61,106 +108,50 @@ const TicketModal: FC<ITicketModalProps> = ({ close }) => {
         </div>
         <SeparatorLine light />
         <ul className="ticket-modal-list">
-          <li
-            className="ticket-modal-list__item"
-            onClick={() => setCurrentItem(TICKET_TYPE.ANOTHER_PROBLEM)}
-          >
-            <div className="ticket-modal-list__image">
-              <Image
-                src={require("@/shared/assets/icons/soft.svg")}
-                alt="icon"
-              />
-            </div>
-            <div className="ticket-modal-list__wrapper">
-              <h2 className="ticket-modal-list__title">Не работает софт</h2>
-              <span className="ticket-modal-list__description">
-                Здесь вы можете сообщить о проблемах с софтом
-              </span>
-            </div>
-            <AuthCheckbox
-              value={currentItem === TICKET_TYPE.SOFT_NOT_WORKING}
-            />
-          </li>
-          <li
-            className="ticket-modal-list__item"
-            onClick={() => setCurrentItem(TICKET_TYPE.ANOTHER_PROBLEM)}
-          >
-            <div className="ticket-modal-list__image">
-              <Image
-                src={require("@/shared/assets/icons/soft.svg")}
-                alt="icon"
-              />
-            </div>
-            <div className="ticket-modal-list__wrapper">
-              <h2 className="ticket-modal-list__title">Не работает софт</h2>
-              <span className="ticket-modal-list__description">
-                Здесь вы можете сообщить о проблемах с софтом
-              </span>
-            </div>
-            <AuthCheckbox
-              value={currentItem === TICKET_TYPE.PAYMENT_PROBLEMS}
-            />
-          </li>
-          <li
-            className="ticket-modal-list__item"
-            onClick={() => setCurrentItem(TICKET_TYPE.ANOTHER_PROBLEM)}
-          >
-            <div className="ticket-modal-list__image">
-              <Image
-                src={require("@/shared/assets/icons/soft.svg")}
-                alt="icon"
-              />
-            </div>
-            <div className="ticket-modal-list__wrapper">
-              <h2 className="ticket-modal-list__title">Не работает софт</h2>
-              <span className="ticket-modal-list__description">
-                Здесь вы можете сообщить о проблемах с софтом
-              </span>
-            </div>
-            <AuthCheckbox value={currentItem === TICKET_TYPE.RESET_HWID} />
-          </li>
-          <li
-            className="ticket-modal-list__item"
-            onClick={() => setCurrentItem(TICKET_TYPE.ANOTHER_PROBLEM)}
-          >
-            <div className="ticket-modal-list__image">
-              <Image
-                src={require("@/shared/assets/icons/soft.svg")}
-                alt="icon"
-              />
-            </div>
-            <div className="ticket-modal-list__wrapper">
-              <h2 className="ticket-modal-list__title">Не работает софт</h2>
-              <span className="ticket-modal-list__description">
-                Здесь вы можете сообщить о проблемах с софтом
-              </span>
-            </div>
-            <AuthCheckbox value={currentItem === TICKET_TYPE.COLLABORATION} />
-          </li>
-          <li
-            className="ticket-modal-list__item"
-            onClick={() => setCurrentItem(TICKET_TYPE.ANOTHER_PROBLEM)}
-          >
-            <div className="ticket-modal-list__image">
-              <Image
-                src={require("@/shared/assets/icons/soft.svg")}
-                alt="icon"
-              />
-            </div>
-            <div className="ticket-modal-list__wrapper">
-              <h2 className="ticket-modal-list__title">Не работает софт</h2>
-              <span className="ticket-modal-list__description">
-                Здесь вы можете сообщить о проблемах с софтом
-              </span>
-            </div>
-            <AuthCheckbox value={currentItem === TICKET_TYPE.ANOTHER_PROBLEM} />
-          </li>
+          {tickets.map(
+            ({ id, name_ru, description_ru, name_en, description_en }, i) => (
+              <li
+                key={id}
+                className="ticket-modal-list__item"
+                onClick={() => setCurrentItem(id)}
+              >
+                <div
+                  className="ticket-modal-list__image"
+                  style={{
+                    background:
+                      TICKET_TYPES.find((t) => t.id === id.toString())?.bg ??
+                      TICKET_TYPES[4]?.bg,
+                  }}
+                >
+                  <Image
+                    src={
+                      TICKET_TYPES.find((t) => t.id === id.toString())?.image ??
+                      TICKET_TYPES[4]?.image
+                    }
+                    alt="icon"
+                  />
+                </div>
+                <div className="ticket-modal-list__wrapper">
+                  <h2 className="ticket-modal-list__title">
+                    {locale === "ru" ? name_ru : name_en}
+                  </h2>
+                  <span className="ticket-modal-list__description">
+                    {locale === "ru" ? description_ru : description_en}
+                  </span>
+                </div>
+                <AuthCheckbox
+                  value={currentItem === id}
+                  onChange={() => setCurrentItem(id)}
+                />
+              </li>
+            ),
+          )}
         </ul>
         <SeparatorLine light />
         <div className="w-full p-6">
           <PrimaryButton
-            text="Создать тикет"
-            click={() => console.log("make ticket")}
+            text={t("create")}
+            click={handleCreateTicket}
             classes="ticket-modal__button"
             color="#59B3A8"
             textColor="#0E1012"
