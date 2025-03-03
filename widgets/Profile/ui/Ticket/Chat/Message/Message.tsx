@@ -8,13 +8,21 @@ interface Props {
   texts: string[];
   date: string;
   userName: string;
+  avatar: number;
   files: { name: string; size: number; url: string }[];
 }
 
-export const Message = ({ mine, texts, date, userName, files }: Props) => {
+export const Message = ({
+  mine,
+  texts,
+  date,
+  userName,
+  avatar,
+  files,
+}: Props) => {
   return (
     <div className={`ticket-chat__chat__message ${mine && "mine"}`}>
-      <User userName={userName} />
+      <User userName={userName} avatar={avatar} />
       {texts?.map((t, i) => <Card key={i} text={t} />)}
       {files?.length > 0 ? <Files files={files} /> : null}
       <Date date={date} />

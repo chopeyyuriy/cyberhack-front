@@ -42,12 +42,15 @@ export const Ticket = () => {
           from_user: msg.from_user,
           texts: [],
           allFiles: [],
-          date: msg?.from_user.created_at,
+          date: msg?.created_at,
         };
         result.push(currentGroup);
       }
 
-      currentGroup && currentGroup.texts.push(msg.text);
+      if (currentGroup) {
+        currentGroup.texts.push(msg.text);
+        currentGroup.date = msg?.created_at;
+      }
 
       if (hasFiles) {
         currentGroup && currentGroup.allFiles.push(...msg.files);

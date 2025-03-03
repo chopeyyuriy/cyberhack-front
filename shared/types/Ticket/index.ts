@@ -68,6 +68,7 @@ export interface ITicketMessage {
   id: number;
   ticket_id: number;
   from_user_id: number;
+  created_at: string;
   from_user: {
     id: number;
     name: string;

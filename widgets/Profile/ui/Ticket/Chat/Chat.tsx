@@ -59,6 +59,7 @@ export const Chat = ({ messages }: Props) => {
             texts={texts}
             date={handleFormatDate(date)}
             userName={from_user.name}
+            avatar={from_user.avatar}
             files={allFiles?.map(({ name, size, url }) => ({
               name,
               size,
