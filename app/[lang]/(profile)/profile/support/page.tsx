@@ -64,7 +64,12 @@ export default function ProfileSupportPage() {
             click={() => setIsModalOpened(true)}
           />
         </div>
-        {isModalOpened && <TicketModal close={() => setIsModalOpened(false)} />}
+        {isModalOpened && (
+          <TicketModal
+            close={() => setIsModalOpened(false)}
+            onSuccess={() => handleGetTickets(1)}
+          />
+        )}
         <TicketsList
           topics={[t("number"), t("question"), t("date"), t("status")]}
           items={tickets?.data ?? []}

@@ -17,6 +17,7 @@ export const Ticket = () => {
   const [messages, setMessages] = useState<GroupedMessage[]>([]);
 
   const handleGetTicket = () =>
+    ticketId &&
     getUserTicketById(ticketId?.toString()).then((resp) =>
       setTicket(resp?.data),
     );
@@ -61,15 +62,18 @@ export const Ticket = () => {
   };
 
   const handleGetMessages = () =>
+    ticketId &&
     getUserTicketMessages(ticketId?.toString()).then((resp) =>
       setMessages(handleGroupMessages(resp?.data ?? [])),
     );
 
   useEffect(() => {
-    if (ticketId) {
-      handleGetTicket();
-      handleGetMessages();
-    }
+    handleGetTicket();
+    const interval = setInterval(handleGetMessages, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, [ticketId]);
 
   return (

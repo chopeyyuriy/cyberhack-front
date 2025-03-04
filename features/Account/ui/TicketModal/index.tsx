@@ -56,9 +56,10 @@ export const TICKET_TYPES = [
 ];
 export interface ITicketModalProps {
   close: () => void;
+  onSuccess?: () => void;
 }
 
-const TicketModal: FC<ITicketModalProps> = ({ close }) => {
+const TicketModal: FC<ITicketModalProps> = ({ close, onSuccess }) => {
   const [currentItem, setCurrentItem] = useState<number | null>(null);
   const t = useTranslations("tickets");
   const locale = useLocale();
@@ -74,6 +75,7 @@ const TicketModal: FC<ITicketModalProps> = ({ close }) => {
         if (resp.status === 200) {
           toast.success(t("success"));
           close();
+          onSuccess && onSuccess();
         }
       });
     }

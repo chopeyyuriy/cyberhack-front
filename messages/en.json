@@ -520,6 +520,8 @@
     "closedStatus": "Closed",
     "сreating": "Creating a Ticket",
     "selectType": "Select the topic of the issue you want to resolve",
-    "success": "Ticket has been successfully created"
+    "success": "Ticket has been successfully created",
+    "profile": "Your profile",
+    "discord": "Discord"
   }
 }

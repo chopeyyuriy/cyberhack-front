@@ -1,0 +1,79 @@
+.ticket-modal {
+  @apply m-auto mt-[120px] flex w-[524px] flex-col items-center rounded-xl bg-[#0C0E10] p-1;
+
+  &__top {
+    @apply relative w-full p-4;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-[2px];
+  }
+
+  &__title {
+    @apply text-[17px] text-[#C0C6D1];
+  }
+
+  &__description {
+    @apply text-[13px] text-[#8A8A98];
+  }
+
+  &__background {
+    @apply absolute  left-0 top-0 w-full;
+  }
+
+  &__close {
+    @apply absolute right-[10px] top-[10px] flex h-[28px] w-[28px] cursor-pointer items-center justify-center rounded bg-[#0C0E10];
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    &__item {
+      @apply flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors duration-300;
+
+      &_active {
+        @apply bg-[white]/[.02];
+      }
+      &.discord {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
+    &__image {
+      @apply flex h-10 w-10 items-center justify-center rounded;
+      height: 60px;
+      width: 60px;
+      background: linear-gradient(
+        180deg,
+        rgba(138, 218, 209, 0),
+        rgba(138, 218, 209, 0.12) 100%
+      );
+      img, svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &__wrapper {
+      @apply mr-auto flex flex-col gap-[2px];
+    }
+
+    &__title {
+      @apply text-sm font-light text-[#C0C6D1];
+      font-size: 14px;
+    }
+
+    &__description {
+      @apply text-[13px] text-[#595962];
+    }
+  }
+
+  &__button {
+    @apply w-full;
+  }
+}
