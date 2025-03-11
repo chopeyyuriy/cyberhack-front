@@ -6,6 +6,7 @@ import { useAppSelector } from "@/store";
 
 interface Props {
   messages: GroupedMessage[];
+  messagesCount: number;
 }
 
 interface File {
@@ -40,7 +41,7 @@ export interface GroupedMessage {
   id: number;
 }
 
-export const Chat = ({ messages }: Props) => {
+export const Chat = ({ messages, messagesCount }: Props) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const user = useAppSelector((state) => state.session.user);
 
@@ -48,7 +49,7 @@ export const Chat = ({ messages }: Props) => {
     if (wrapperRef.current) {
       wrapperRef.current.scrollTop = wrapperRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messagesCount]);
 
   return (
     <div className="ticket-chat__chat">

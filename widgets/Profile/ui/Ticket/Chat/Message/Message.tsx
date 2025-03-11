@@ -22,7 +22,7 @@ export const Message = ({
 }: Props) => {
   return (
     <div className={`ticket-chat__chat__message ${mine && "mine"}`}>
-      <User userName={userName} avatar={avatar} />
+      <User userName={userName} avatar={avatar} mine={mine} />
       {texts?.map((t, i) => <Card key={i} text={t} mine={mine} />)}
       {files?.length > 0 ? <Files files={files} /> : null}
       <Date date={date} />

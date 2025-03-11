@@ -123,6 +123,8 @@
   },
   "game": {
     "back": "Go to catalog",
+    "favorablePrice": "Favorable price",
+
     "status": {
       "label": "Status",
       "version": "Game version",

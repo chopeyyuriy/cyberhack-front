@@ -13,6 +13,7 @@ export interface ICheatItemProps {
   title: string;
   startPrice: number;
   href: string;
+  isNew?: boolean;
   children?: ReactNode;
 }
 
@@ -23,8 +24,9 @@ const CheatItem: FC<ICheatItemProps> = ({
   href,
   startPrice,
   children,
+  isNew,
 }) => {
-  const t = useTranslations('game');
+  const t = useTranslations("game");
 
   return (
     <a href={href} className="cheat-item">
@@ -36,15 +38,26 @@ const CheatItem: FC<ICheatItemProps> = ({
         className="cheat-item__image"
       />
       <div className="cheat-item__container">
-        <h2 className={cn("cheat-item__title", unbounded.className)}>
-          {title}
+        <h2
+          className={cn(
+            "cheat-item__title flex items-center gap-2",
+            unbounded.className,
+          )}
+        >
+          {title}{" "}
+          {isNew ? (
+            <div className="cheat-item__new">
+              <span>new</span>
+            </div>
+          ) : null}
         </h2>
         <div className="cheat-item__wrapper">{children}</div>
       </div>
       <div className="cheat-item-price">
-        <span className="cheat-item__text">{t('startWith')}:</span>
+        <span className="cheat-item__text">{t("startWith")}:</span>
         <span className={cn("cheat-item__value", unbounded.className)}>
-          {startPrice}{currency}
+          {startPrice}
+          {currency}
         </span>
       </div>
     </a>

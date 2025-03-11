@@ -39,7 +39,7 @@ const TicketModal: FC<ITicketModalProps> = ({ close }) => {
 
   return (
     <ModalContainer>
-      <div className="ticket-modal">
+      <div className="ticket-modal-types">
         <div className="ticket-modal__top">
           <Image
             src={require("@/shared/assets/images/profile/modal-top-bg.svg")}

@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Actions } from "./Actions";
 import { File } from "./File";
 import { Input } from "./Input";
 import { sendUserTicketMessage } from "@/entities/Ticket/api";
 import { useParams } from "next/navigation";
+import useSound from "use-sound";
 
 interface Props {
   onRefetchMessages: () => void;
@@ -15,6 +16,9 @@ export const Footer = ({ onRefetchMessages }: Props) => {
   const [value, setValue] = useState("");
   const [files, setFiles] = useState<{ file: File; preview: string }[]>([]);
   const [loading, setLoading] = useState(false);
+  const [play] = useSound("https://cyberhack.pro/storage/song/send-msg.mp3", {
+    volume: 0.0092,
+  });
 
   const handleChangeValue = (val: string) => setValue(val);
 
@@ -33,6 +37,7 @@ export const Footer = ({ onRefetchMessages }: Props) => {
           setLoading(false);
           if (resp.status === 200) {
             onRefetchMessages();
+            play();
             setValue("");
             setFiles([]);
           }
@@ -57,6 +62,7 @@ export const Footer = ({ onRefetchMessages }: Props) => {
           onAddFile={handleAddFile}
         />
       </div>
+
       {files?.length > 0 ? (
         <div className="ticket-chat__footer-files">
           {files?.map(({ file, preview }, i) => (

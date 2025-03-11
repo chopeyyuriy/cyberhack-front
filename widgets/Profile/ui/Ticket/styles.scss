@@ -1,5 +1,10 @@
 .ticket-chat {
   padding: 6px;
+  &.closed {
+    .ticket-chat__chat {
+      height: calc(100svh - 100px);
+    }
+  }
   &__header {
     padding: 14px 12px;
     background: #0d1011;
@@ -141,6 +146,7 @@
         margin-bottom: 8px;
         img {
           object-fit: cover;
+          border-radius: 100%;
         }
       }
       &-card {

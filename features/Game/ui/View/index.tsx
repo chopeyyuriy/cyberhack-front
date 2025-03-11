@@ -61,32 +61,32 @@ export const GameView: FC<Props> = ({
 
   useEffect(() => {
     const status = [undefined, 2, 4, 0, 1];
-    getProductsByGameApi(game.id, status[currentStatus]).then(
-      ({ data }: any) => {
-        data = data.sort((a: any, b: any) => {
-          if (currentSort === 0) {
-            return (
-              new Date(b.created_at).getTime() -
-              new Date(a.created_at).getTime()
-            );
-          }
-          if (currentSort === 1) {
-            return (
-              new Date(a.created_at).getTime() -
-              new Date(b.created_at).getTime()
-            );
-          }
-          if (currentSort === 2) {
-            return a.price[region].cost - b.price[region].cost;
-          }
-          if (currentSort === 3) {
-            return b.price[region].cost - a.price[region].cost;
-          }
-          return 0;
-        });
-        setProducts(data);
-      },
-    );
+    getProductsByGameApi(
+      game.id,
+      status[currentStatus],
+      currentSort && currentSort === 1 ? 4 : undefined,
+    ).then(({ data }: any) => {
+      data = data.sort((a: any, b: any) => {
+        if (currentSort === 0) {
+          return (
+            new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+          );
+        }
+        if (currentSort === 1) {
+          return (
+            new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+          );
+        }
+        if (currentSort === 2) {
+          return a.price[region].cost - b.price[region].cost;
+        }
+        if (currentSort === 3) {
+          return b.price[region].cost - a.price[region].cost;
+        }
+        return 0;
+      });
+      setProducts(data);
+    });
   }, [currentStatus, currentSort]);
 
   const statuses = [
@@ -150,6 +150,7 @@ export const GameView: FC<Props> = ({
 
     window.location.replace(`/catalog/${item.path}`);
   };
+  console.log(products);
 
   return (
     <div className="select-cheats__container mt-[18px] flex items-center gap-5 max-md:flex-col-reverse md:items-start">
@@ -192,6 +193,7 @@ export const GameView: FC<Props> = ({
                 startPrice={getPrice(item.price[region].cost)}
                 currency={currency}
                 href={`/catalog/${game.path}/${item.path}`}
+                isNew={item?.specification?.is_new === 1}
               >
                 <div className="flex items-center gap-1">
                   <div className="select-cheats__tag flex items-center gap-2 px-1">
@@ -207,10 +209,59 @@ export const GameView: FC<Props> = ({
                       className="select-cheats__text text-[13px] text-[#71B280]"
                       style={{ color: statusColor[item.status] }}
                     >
-                      {getProductStatusText(item.status)}
+                      {getProductStatusText(item.status)}{" "}
                     </span>
                   </div>
-                  <Slash classes="!h-[16px]" />
+                  {item?.specification?.is_favorable_price === 1 ? (
+                    <>
+                      {" "}
+                      <Slash classes="!h-[16px]" />
+                      <div className="select-cheats__tag flex items-center gap-2 px-1">
+                        <span className="select-cheats__text text-[13px] text-[#71B280]">
+                          {t("favorablePrice")}
+                        </span>
+                      </div>
+                    </>
+                  ) : null}
+                  {typeof item?.specification?.os === "number" ? (
+                    <>
+                      <Slash classes="!h-[16px]" />
+                      <div className="select-cheats__tag-specification flex items-center gap-2 p-2.5">
+                        <Image
+                          src={require(
+                            `@/shared/assets/icons/windows-grey.svg`,
+                          )}
+                          alt="status"
+                          width={16}
+                          height={16}
+                        />
+                        {item?.specification?.os === 1
+                          ? "Windows 10"
+                          : item?.specification?.os === 2
+                            ? " Windows11"
+                            : "Windows 10/11"}
+                      </div>
+                    </>
+                  ) : null}
+                  {typeof item?.specification?.processor === "number" ? (
+                    <>
+                      {" "}
+                      <Slash classes="!h-[16px]" />
+                      <div className="select-cheats__tag-specification flex items-center gap-2 p-2.5">
+                        <Image
+                          src={require(`@/shared/assets/icons/cpu-grey.svg`)}
+                          alt="status"
+                          width={16}
+                          height={16}
+                        />
+                        {item?.specification?.processor === 1
+                          ? "AMD"
+                          : item?.specification?.processor === 2
+                            ? "Intel"
+                            : "AMD/Intel"}
+                      </div>
+                    </>
+                  ) : null}
                   {/* <div className="select-cheats__tag flex items-center gap-2 px-1">
                     <Image
                       src={require("@/shared/assets/icons/status.svg")}

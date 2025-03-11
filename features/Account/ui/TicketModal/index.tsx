@@ -18,6 +18,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { createUserTicket, getTicketsListApi } from "@/entities/Ticket/api";
 import { ITicket } from "@/shared/types/Ticket";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export enum TICKET_TYPE {
   SOFT_NOT_WORKING,
@@ -64,6 +65,7 @@ const TicketModal: FC<ITicketModalProps> = ({ close, onSuccess }) => {
   const t = useTranslations("tickets");
   const locale = useLocale();
   const [tickets, setTickets] = useState<ITicket[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     getTicketsListApi().then((resp) => setTickets(resp.data));
@@ -71,13 +73,18 @@ const TicketModal: FC<ITicketModalProps> = ({ close, onSuccess }) => {
 
   const handleCreateTicket = () => {
     if (currentItem) {
-      createUserTicket(currentItem).then((resp) => {
-        if (resp.status === 200) {
-          toast.success(t("success"));
-          close();
-          onSuccess && onSuccess();
-        }
-      });
+      createUserTicket(currentItem)
+        .then((resp) => {
+          if (resp.status === 200) {
+            toast.success(t("success"));
+            router.push(`/profile/support/${resp?.data?.id}`);
+            close();
+            // onSuccess && onSuccess();
+          } else {
+            console.log(resp);
+          }
+        })
+        .catch((resp) => toast.error(resp?.response?.data?.message ?? "Error"));
     }
   };
 

@@ -13,7 +13,7 @@ export const Actions = ({ disabled, onSend, onAddFile }: Props) => {
   const handleFileChange = (event: any) => {
     const file = event.target.files[0];
 
-    if (file) {
+    if (file && file.type.includes("image/")) {
       const reader = new FileReader();
       reader.onloadend = () => {
         const base64String = reader.result; // буде щось типу "data:image/jpeg;base64,..."
